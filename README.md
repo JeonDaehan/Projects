@@ -13,6 +13,7 @@ My_Projects_Data_Analyst
 2) 프로젝트 소스 : 코드작성 파일명(jupyter notebook, pycharm)
 3) 개발 환경
 Colab (GPU사용)
+
 설치모듈 : numpy, pandas, matplotlib, tensorflow, os, glob, shutil, random, cv2, google.colab, zipfile, datetime
 ## 4) 모델 아키텍처 및 선정 이유
 CNN구조 : C-P-Drop-C-P-Drop-C-P-Drop-F-Drop-D
@@ -21,24 +22,23 @@ CNN구조 : C-P-Drop-C-P-Drop-C-P-Drop-F-Drop-D
 
 ## 5) 결과
 
-## 훈련(training)
+##### 훈련(training)
 ## C-P-C-P-C-P-F-D-D
-lr 0.0001 => loss: 0.0102 - accuracy: 0.9969 - val_loss: 0.0237 - val_accuracy: 0.9930 과적합 
-lr 0.00001 => loss: 0.0317 - accuracy: 0.9905 - val_loss: 0.0390 - val_accuracy: 0.9944 
+- lr 0.0001 => loss: 0.0102 - accuracy: 0.9969 - val_loss: 0.0237 - val_accuracy: 0.9930 과적합 
+- lr 0.00001 => loss: 0.0317 - accuracy: 0.9905 - val_loss: 0.0390 - val_accuracy: 0.9944 
 
 ## C-P-C-P-F-D-D 
-lr 0.0001 => loss: 0.0146 - accuracy: 0.9956 - val_loss: 0.0103 - val_accuracy: 0.9966
-lr 0.00001 => loss: 0.0482 - accuracy: 0.9854 - val_loss: 0.0130 - val_accuracy: 0.9986
+- lr 0.0001 => loss: 0.0146 - accuracy: 0.9956 - val_loss: 0.0103 - val_accuracy: 0.9966
+- lr 0.00001 => loss: 0.0482 - accuracy: 0.9854 - val_loss: 0.0130 - val_accuracy: 0.9986
 
-## 평가(evaluate)
+##### 평가(evaluate)
 ## C-P-C-P-C-P-F-D-D
-lr 0.00001 [0.04126840457320213, 0.9888749718666077] 정확성과 과적합이 없음
-lr 0.0001 [0.03228703513741493, 0.9911249876022339] 과적합
-
+- lr 0.00001 [0.04126840457320213, 0.9888749718666077] 정확성과 과적합이 없음
+- lr 0.0001 [0.03228703513741493, 0.9911249876022339] 과적합
 
 ## C-P-C-P-F-D-D
-lr 0.00001 [0.13723982870578766, 0.9537500143051147] 정확성이 떨어짐.
-lr 0.0001 [0.019934188574552536, 0.9948750138282776] 과적합
+- lr 0.00001 [0.13723982870578766, 0.9537500143051147] 정확성이 떨어짐.
+- lr 0.0001 [0.019934188574552536, 0.9948750138282776] 과적합
 
 ### 위의 실험을 통해 최종적으로 모델의 정확성이 가장 높았던 "C-P-C-P-C-P-F-D-D"모델로 채택하고, 과적합이 최소화 되었던 lr = 0.00001로 설정하여 99%의 모델을 만들었다. 
 
